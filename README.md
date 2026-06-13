@@ -59,6 +59,12 @@ To build the project, run:
 
 npm run build
 
+## Hydration Issue Handling
+
+This project mostly uses static components to avoid hydration mismatch.
+
+If browser-only features such as localStorage, dark mode persistence, or cart persistence are added in the future, the browser data should be accessed inside useEffect in a client component. This prevents hydration mismatch because localStorage is only available in the browser and not during server-side rendering.
+
 ## Image Credits
 
 Pinterest & Unsplash
